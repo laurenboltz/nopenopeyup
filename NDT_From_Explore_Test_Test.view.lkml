@@ -1,7 +1,7 @@
 # If necessary, uncomment the line below to include explore_source.
 # include: "lauren178868tickettest.model.lkml"
 
-view: add_a_unique_name_1542322930 {
+view: NDT_From_Explore_test_test {
   derived_table: {
     explore_source: test_test {
       column: id { field: order_items.id }
