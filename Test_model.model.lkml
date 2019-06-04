@@ -1,7 +1,7 @@
 connection: "thelook"
 
-include: "*.view.lkml"                       # include all views in this project
-# include: "my_dashboard.dashboard.lookml"   # include a LookML dashboard called my_dashboard
+include: "*.view.lkml"
+include: "*.dashboard.lookml"
 
 explore: events {
   join: users {
@@ -32,6 +32,12 @@ explore: order_items {
     relationship: many_to_one
   }
 
+  # join: NDTtest_test {
+  #   type: left_outer
+  #   sql_on: ${NDTtest_test.id}.id} = ${order_items.id} ;;
+  #   relationship: one_to_one
+  # }
+
   join: products {
     type: left_outer
     sql_on: ${inventory_items.product_id} = ${products.id} ;;
@@ -59,4 +65,6 @@ explore: orders {
     sql_on: ${orders.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
+
+
   }

@@ -67,6 +67,11 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
+  dimension: is_female {
+    type: yesno
+    sql: ${gender} = 'f' ;;
+  }
+
   measure: count {
     type: count
     drill_fields: [detail*]

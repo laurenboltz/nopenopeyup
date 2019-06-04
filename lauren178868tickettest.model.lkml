@@ -14,6 +14,8 @@ explore: test_test {
   view_name: order_items
 }
 
+# explore: NDTtest_test {}
+
 explore: events {
   join: users {
     type: left_outer
