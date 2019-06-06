@@ -36,4 +36,17 @@ view: orders {
     type: count
     drill_fields: [id, users.first_name, users.last_name, users.id, order_items.count]
   }
+
+  measure: count_buckets {
+    type: string
+    sql:
+    CASE WHEN ${count} <= 2 THEN "0-2"
+    WHEN ${count} < 5 THEN "2-5"
+    WHEN ${count} < 10 THEN "5-10"
+    WHEN ${count} < 20 THEN "10-20"
+    WHEN ${count} < 50 THEN "20-50"
+    ELSE "other"
+    END
+    ;;
+  }
 }

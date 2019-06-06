@@ -35,7 +35,18 @@ view: products {
   dimension: retail_price {
     type: number
     sql: ${TABLE}.retail_price ;;
+
   }
+
+  dimension: tier_dimension{
+    type: tier
+    tiers: [0, 10, 20, 30, 40, 50, 60, 70, 80]
+    style: integer # the default value, could be excluded
+    sql: ${retail_price} ;;
+
+
+  }
+
 
   dimension: sku {
     type: string
