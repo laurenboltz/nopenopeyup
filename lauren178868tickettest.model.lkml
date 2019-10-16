@@ -85,8 +85,3 @@ explore: user_data {
     relationship: many_to_one
   }
 }
-
-explore: users {
-  sql_always_where: ${age} > 9 ;;
-  always_filter: {}
-}

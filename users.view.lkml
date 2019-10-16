@@ -17,6 +17,18 @@ view: users {
     sql: ${TABLE}.city ;;
   }
 
+  parameter: city_filter {
+    type: string
+    allowed_value: {
+      label: "'BLANK'"
+      value: "'BLANK'"
+    }
+    allowed_value: {
+      label: "'NOT BLANK'"
+      value: "'NOT BLANK'"
+    }
+  }
+
   dimension: country {
     type: string
     map_layer_name: countries
