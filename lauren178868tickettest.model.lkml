@@ -8,7 +8,7 @@ datagroup: lauren178868tickettest_default_datagroup {
   max_cache_age: "1 hour"
 }
 
-persist_with: lauren178868tickettest_default_datagroup
+# persist_with: lauren178868tickettest_default_datagroup
 
 # explore: test_test {
 #   view_name: order_items
